@@ -12,6 +12,7 @@ var sortApp = angular.module('sortApp', []);
 		// Set $scope.data equal to the data returned in your results
 
 sortApp.controller('mainController', function ($scope, $http) {
+    $scope.sortType = 'name'
     $http.get('../data/salaries.json').then(function(response) {
         $scope.data = response.data
     });
